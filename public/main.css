@@ -1,0 +1,16 @@
+.link
+{
+    padding: 15px;
+    border: 5px solid #000000;
+    background-color: #000ecc;
+    color: #bd0000;
+}
+body
+{
+    text-align: center;
+}
+
+.text
+{
+    text-align: left;
+}

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    div.text W projekcie tym wykonuje ankiete na temat smartfonów ankietownych. 
+        <br> Ankiete można wykonywac dowlną ilość razy. 
+        <br> Wyniki ankiety są przedstawione w postaci wykresów słupkowych, dostępnych wyłączenie po zalogowaniu. 
+        <br> Zapis danych odbywa się z wykorzystaniem dwóch baz danych:
+
+        <br> - Dane użytkowników (na serwerze) - MongoDB,
+        <br> - Dane ankietowane po zalogowaniu (na serverze) - MongoDB,
+        <br> - Dane ankietowane przed zalogowaniem (w przeglądarce) - IndexedDB.
+        <br> 
+        <br> Przekazanie danych pomiędzy odpowiednimi bazami odbywa się automatycznie, 
+        |po zalogowaniu użytkownika lub po wciśnięciu przycisku "Prześlij wyniki". 
+        <br> Przycisk "Następna ankieta" zapisuje dane lokalnie i pozwala nw wypełnienie ankiety ponownie.
+        <br> Przycisk "Prześlij wyniki" przesyła dane na server z auktulanie wypełninej ankiety jak i z bazy lokalnej.
+        <br> Wykresy są generowane wyłącznie dla wartości przechowywanych w bazie MongoDB.
+        <br>
+        <br> Technologie wykorzystane do projektu:
+        <br> Po stronie klienta: HTML5, CSS, JavaScript, IndexedDB
+        <br> Po stronie serwera: Node.js, Express.js, MongoDB

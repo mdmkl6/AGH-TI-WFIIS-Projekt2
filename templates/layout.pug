@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Ankieta o smartfonach
+    link(type="text/css" href="main.css" rel="stylesheet")
+    block head
+  body
+    h1 #{title}
+    nav
+      a(href='/info', class='link') Opis projektu
+      a(href='/', class='link') Ankieta
+      a(href='/wykresy', class='link') Wykresy
+      a(href='/login', class='link') Zaloguj się
+      a(href='/register', class='link') Zajerestruj się
+      a(href='/logout', class='link') Wyloguj się
+    br
+    block content
+    br
+    hr
+    footer 
+        p Copyright &copy; 2022

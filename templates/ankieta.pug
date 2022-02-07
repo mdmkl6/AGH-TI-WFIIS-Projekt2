@@ -1,0 +1,92 @@
+extends layout
+
+block head 
+    script(src="main.js" type="text/javascript")
+
+block content
+  form#form(method='POST',action='/ankieta')
+    #from-group
+        label Ile posiadasz smarftonów: 
+        br
+        input(type="radio", name="ilosc", value="0")
+        | 0  &emsp;
+        input(type="radio", name="ilosc", value="1")
+        | 1  &emsp;
+        input(type="radio", name="ilosc", value="2")
+        | 2  &emsp;
+        input(type="radio", name="ilosc", value="3")
+        | 3  &emsp;
+        input(type="radio", name="ilosc", value="4")
+        | Więcej  &emsp;
+    br
+    #from-group
+        label Jakiej marki posiadasz smarfon: 
+        br
+        input(type="radio", name="marka", value="Samsung")
+        | Samsung &emsp;
+        input(type="radio", name="marka", value="Xiaomi")
+        | Xiaomi &emsp;
+        input(type="radio", name="marka", value="Oppo")
+        | Oppo &emsp;
+        input(type="radio", name="marka", value="Vivo")
+        | Vivo &emsp;
+        br
+        input(type="radio", name="marka", value="Poco")
+        | Poco &emsp;
+        input(type="radio", name="marka", value="Realme")
+        | Realme &emsp;
+        input(type="radio", name="marka", value="Motorola")
+        | Motorola &emsp;
+        input(type="radio", name="marka", value="Sony")
+        | Sony &emsp;
+        br
+        input(type="radio", name="marka", value="HTC")
+        | HTC &emsp;
+        input(type="radio", name="marka", value="LG")
+        | LG &emsp;
+        input(type="radio", name="marka", value="Oneplus")
+        | Oneplus &emsp;
+        input(type="radio", name="marka", value="Huawei")
+        | Huawei &emsp;
+        input(type="radio", name="marka", value="Inne")
+        | Inne &emsp;
+        input(type="radio", name="marka", value="Apple")
+        | Apple &emsp;
+    br
+    #from-group
+        label Ile wart jest twój smartfon: 
+        br
+        input(type="radio", name="cena", value="500")
+        | Mniej niż 500 zł &emsp;
+        input(type="radio", name="cena", value="1000")
+        | 500-1000 zł &emsp;
+        input(type="radio", name="cena", value="1500")
+        | 1000-1500 zł &emsp;
+        input(type="radio", name="cena", value="2000")
+        | 1500-2000 zł &emsp;
+        input(type="radio", name="cena", value="3000")
+        | 2000-3000 zł &emsp;
+        input(type="radio", name="cena", value="5000")
+        | Więcej niż 3000 zł &emsp;
+    br
+    #from-group
+        label Jakiej jesteś płci: 
+        br
+        input(type="radio", name="male", value="fmale")
+        | Kobieta &emsp;
+        input(type="radio", name="male", value="male")
+        | Mężczyzna &emsp;
+    br
+    #from-group
+        label Ile masz lat:
+        input.form-control(name='wiek',type='number')
+    br
+    input.btn(type='button',value='Następna ankieta',onclick="save(this.form)")
+    input.btn.btn-primary(type='submit',value='Prześlij wyniki',onclick="send_all()")
+    
+
+
+    //- #from-group
+    //-     label Title: 
+    //-     input.form-control(name='title',type='text')
+    //- input.btn.btn-primary(type='submit',value='Submit')

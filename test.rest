@@ -1,0 +1,37 @@
+GET http://localhost:10007/
+
+###
+
+GET http://localhost:10007/users
+
+###
+
+POST http://localhost:10007/login
+content-type: application/json
+
+{
+    "email":"user",
+    "password":"pass"
+}
+
+
+###
+POST http://localhost:10007/register
+content-type: application/json
+
+{
+    "name":"user",
+    "pass":"pass"
+}
+
+###
+POST http://localhost:10007/add
+content-type: application/json
+
+{
+    "id":"5",
+    "title":"cos"
+}
+
+###
+GET http://localhost:10007/logout

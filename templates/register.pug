@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  br
+  form(method='POST',action='/register')
+    #from-group
+        label Login: 
+        input.form-control(name='name',type='text')
+    br
+    #from-group
+        label Hasło: 
+        input.form-control(name='pass',type='text')
+    br
+    input.btn.btn-primary(type='submit',value='Zarejestruj sie')
+    p #{out}
